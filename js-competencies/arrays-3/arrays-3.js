@@ -10,7 +10,10 @@
 
 var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 
-//Code here
+function sunset(){
+  sunsetColors.splice(0, 1,"blue")
+  return sunsetColors;
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -21,7 +24,11 @@ var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 
 var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"]
 
-//Code here
+function sunrise(){
+  let newArr = sunriseColors.slice();
+  newArr.splice(0, 1,"green")
+  return newArr;
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -41,11 +48,11 @@ var sunriseColors = ["yellow", "orange", "red", "pink", "purple", "blue"]
 //                 the copy and the original; a copy made by value will only 
 //                 change the copy's values`
 
-// var refVsVal = `Passing by reference points to the same object in memory;
-//                 pass by value creates a new object in memory with the same 
-//                 values. A change made to a reference copy will change both 
-//                 the copy and the original; a copy made by value will only 
-//                 change the copy's values`
+var refVsVal = `Passing by reference points to the same object in memory;
+                pass by value creates a new object in memory with the same 
+                values. A change made to a reference copy will change both 
+                the copy and the original; a copy made by value will only 
+                change the copy's values`
 
 // var refVsVal = `Passing by reference creates a new array in memory that 
 //                 points to the original array in memory; pass by value creates 
