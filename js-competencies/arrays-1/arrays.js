@@ -34,9 +34,11 @@ const rubberDucks = ['yellow', 'red', 'blue', 'brown']
 //parameter: an array, and returns the last element of the array.
 //The passed-in array should NOT be modified.
 
-// function getLast(array){
-//   return 
-// }
+ function getLast(array){
+  let last = array[array.length - 1]
+  return last
+ }
+
 
 
 //////////////////PROBLEM 4////////////////////a
@@ -46,8 +48,8 @@ const rubberDucks = ['yellow', 'red', 'blue', 'brown']
 //at the numbered index of that array.
 //The passed-in array should NOT be modified.
 
-function getElement(array){
-  array.pop()
+function getElement(array, index){
+  return array[index]
 }
 
 //////////////////PROBLEM 5////////////////////
@@ -57,8 +59,9 @@ function getElement(array){
 //should change the element at the numbered index of that array
 //to the given value. You do not need to return the array.
 
-
-
+function changeElement(array, index, value){
+    array.splice(index, 1, value)
+}
 
 //////////////////PROBLEM 6////////////////////
 
@@ -66,5 +69,6 @@ function getElement(array){
 //the last element. trim should return the array.
 
 function trim(array){
-  array.pop()
+  let trimmmed = array.pop()
+  return array
 }
