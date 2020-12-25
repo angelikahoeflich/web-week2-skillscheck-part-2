@@ -10,10 +10,10 @@
 
 function addDucks(arr, ind) {
 
-  //WRITE YOUR FOR-LOOP HERE
+  for (let i = 0; i < arr.length; i++){
   //For your iterator, declare it with the let keyword, and name it "i"
-  
-
+  if 
+  }
   //DO NOT TOUCH THIS
   return [arr, ind]
 }

@@ -59,7 +59,7 @@ let globalCheckOut = checkout()
 
 // What is the context of running checkOut()?
 // var q3Context = "explicit"
- var q3Context = "implicit"
+//  var q3Context = "implicit"
   // var q3Context = 'default';
 // var q3Context = "new"
 
