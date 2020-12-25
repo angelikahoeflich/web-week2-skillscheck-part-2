@@ -10,8 +10,10 @@
 
   function addNumbers(value){
       var myNumbers = []
-      //Code here
-      
+      for(i = 0; i < value.length; i ++){
+        myNumbers += value[i]
+      }
+        return myNumbers
   }
 
 
