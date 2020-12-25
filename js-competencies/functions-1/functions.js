@@ -22,7 +22,9 @@ try {
 //declaration. hey should take in a 'name' parameter, and return
 //the string "Hey " plus the name.
 
-//Code here
+function hey(name){
+  return 'Hey ' + name
+}
 
 
 ///////////////////Problem 2//////////////////
@@ -30,7 +32,9 @@ try {
 //expression (without ES6). hi should take in a 'name' parameter, and return
 //the string "Hi " plus the name.
 
-//Code here
+const hi = function(name){
+  return 'Hi ' + name
+}
 
 
 ///////////////////Problem 3//////////////////
@@ -38,7 +42,9 @@ try {
 //function. hello should take in a 'name' parameter, and return
 //the string "Hello " plus the name.
 
-//Code here
+const hello = (name) => {
+  return 'Hello ' + name
+}
 
 
 ///////////////////Problem 4//////////////////
@@ -48,7 +54,10 @@ try {
 //with the string "Yay" and save the result of the function to a 
 //variable called funTimes.
 
-//Code here
+function fun(str){
+  return str + '!!!!!'
+}
+let funTimes = fun('Yay')
 
 
 ///////////////////Problem 5//////////////////
