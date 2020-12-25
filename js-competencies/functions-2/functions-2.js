@@ -9,8 +9,12 @@
 //NOTE: key should not be an arrow function,
 //but a function expression saved to the variable key.
 
-//Code here
-
+function keyword(){
+  const key = function(){
+    return 'word'
+  }
+  return key
+}
 
 ///////////////////Problem 2//////////////////
 //Answer the questions based on the following code:
