@@ -6,10 +6,10 @@
 //BROKEN ON PURPOSE 
 
 function EgyptianGoddesses(name, oversees, strength, weakness) {
-  name = name;
-  oversees = oversees;
-  strength = strength;
-  weakness = weakness;
+  name,
+  oversees,
+  strength,
+  weakness
 
   return function() {
     name,
@@ -25,7 +25,7 @@ function EgyptianGoddesses(name, oversees, strength, weakness) {
 
 var maatCharacteristics = ['Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her standards']
 
-//Code here
+let maat = new EgyptianGoddesses('Maat', 'Truth and Justice', 'Balancing and Just', 'Exacting in her standards')
 
 
 
@@ -35,17 +35,15 @@ var maatCharacteristics = ['Maat', 'Truth and Justice', 'Balancing and Just', 'E
 
 //BROKEN ON PURPOSE 
 
-function TestScores() {
-  this.name;
-  this.percent;
-
+function TestScores(name, percent) {
+ 
   return this.name + this.percent
 }
 
 
 //Now create a new TestScore with the above constructor function, and save it in a variable called suzy. Suzy got a 98 on the test.
 
-//Code here
+let suzy = new TestScores('Suzy', 98)
 
 
 
