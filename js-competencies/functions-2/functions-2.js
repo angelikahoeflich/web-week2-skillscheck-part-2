@@ -9,8 +9,8 @@
 //NOTE: key should not be an arrow function,
 //but a function expression saved to the variable key.
 
-function keyword(){
-  const key = function(){
+function keyword() {
+  var key = function () {
     return 'word'
   }
   return key
@@ -128,13 +128,17 @@ var answer5 = ["funcA"]
 
 //NOTE: Don't invoke the functions that you return
 
-function janus(param){
-  function left(){
+function janus(boolean){
+  var left = function left() {
     return 'Looking backwards'
   }
-  function right(){
+  var right = function right() {
     return 'Looking forwards'
   }
-  param ? left() : right()
+  if (boolean) {
+    return right
+  } else {
+    return left
+  }
 }
 
