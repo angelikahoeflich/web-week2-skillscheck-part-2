@@ -11,8 +11,7 @@
 function addDucks(arr, ind) {
 
   for (let i = 0; i < arr.length; i++){
-  //For your iterator, declare it with the let keyword, and name it "i"
-  if 
+    arr[i] += 'Duck'
   }
   //DO NOT TOUCH THIS
   return [arr, ind]
@@ -26,7 +25,7 @@ function addDucks(arr, ind) {
 //invocation within the if statement.
 
 if (true) {
-  //CODE HERE
+  let color = 'red'
 
 
   //DO NOT TOUCH THIS LINE
@@ -38,7 +37,7 @@ if (true) {
 //and call it "greetingsEarthlings"
 //Assign it the value of "Hello".
 
-//Code here
+const greetingsEarthlings = 'Hello'
 
 
 //////////////////PROBLEM 4////////////////////
@@ -51,7 +50,9 @@ if (true) {
 //You MUST use a template string! If you need to
 //look it up, check out the documentation.
 
-//Code here
+function madLib(str){
+  return `${str}, my dear Watson.`
+}
 
 
 //////////////////PROBLEM 5////////////////////
@@ -69,7 +70,7 @@ var obj = { a: "a", b: "b", c: "c" }
 //used spread operators.
 
 // var answers = ["Example A", "Example B", "Example C", "Example D"]
-// var answers = ["Example B", "Example C", "Example D"]
+ var answers = ["Example B", "Example C", "Example D"]
 // var answers = ["Example A", "Example B"]
 // var answers = ["Example C", "Example D"]
 
@@ -79,7 +80,7 @@ var obj = { a: "a", b: "b", c: "c" }
 //take in a string, remove all the spaces, and return the
 //string without spaces.
 
-//Code here
+const cleanUp = (str) => str.split(' ').join('')
 
 
 //////////////////PROBLEM 7////////////////////
@@ -89,9 +90,8 @@ var obj = { a: "a", b: "b", c: "c" }
 //Return ocean.
 
 function whatOcean(obj) {
-
-  //Code here
-  
+  const {ocean} = obj
+  return ocean
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -105,3 +105,6 @@ function whatOcean(obj) {
 //"spaghetti & liver with onions"
 
 
+function leftovers(str, ...params){
+  return str + ' & ' + params[params.length - 1]
+}
