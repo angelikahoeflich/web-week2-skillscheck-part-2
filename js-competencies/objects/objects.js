@@ -31,12 +31,13 @@ var duck = {
 var person = {
   name: "Ella",
   city: "Edinburgh",
-  job: "Leader of Ghost Tours"
+  job: "Leader of Ghost Tours",
+  moveCities: function(newCity){
+    this.city = newCity
+  }
 }
 
-person.moveCities = function(newCity){
-  city =  this.newCity
-}
+
 
 
 ///////////////////Problem 3///////////////////
@@ -68,7 +69,13 @@ var sampleOutput = [
   { city: "New New York", age: 56 }
 ]
 
-//CODE HERE
+function keyAccessor(arr, obj){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(obj[arr[i]])
+  }
+  return newArr;
+}
 
 
 
@@ -79,7 +86,14 @@ var sampleOutput = [
 //the object; and push each value into the empty array.
 //getVals should return the new array.
 
-//CODE HERE
+function getVals(obj){
+  let newArr = [];
+  for(var props in obj){
+    newArr.push(obj[props])
+  }
+
+  return newArr;
+}
 
 
 ///////////////////Problem 5///////////////////
@@ -94,4 +108,4 @@ var doors = {
   brown: "mahogany", 
 }
 
-//Code here
+let doorKeys = Object.keys(doors)
