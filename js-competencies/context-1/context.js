@@ -92,22 +92,26 @@ let moreToGo = areWeThereYet()
 // descent.remainingElevation to a variable
 // named almostThere. You should bind it to the
 // context descent.
+function remainingElevation(){
+  console.log("this?:", this);
+  console.log("remainingElevation called!")
+  console.log("this.destination - this.height:", this.destination - this.height);
+  return this.destination - this.height
+}
 
 var descent = {
   height: 25000,
-  destination: 3500,
-  remainingElevation(){
-    return this.destination - this.height
-  }
+  destination: 3500
 };
 
-let almostThere = descent.remainingElevation.bind(this)
+
+let almostThere = remainingElevation.bind(descent)
 
 
 // Now, invoke almostThere and save the result to
 // a variable named finalDescent.
 
-let finalDescent = almostThere.bind(this)
+let finalDescent = almostThere()
 
 
 // Now, uncomment the best answers:
