@@ -95,19 +95,19 @@ function undefiner(arr){
 //return "FLYING NOCTURNAL MAMMAL MAN!". Otherwise, return the result of
 //the parameter divided by 2.
 
-// function nananan(param){
-//   if ( (param / 2) === NaN ){
-//     return 'FLYING NOCTURNAL MAMMAL MAN!'
-//   } else {
-//     return param / 2
-//   }
-// }
+function nananan(param) {
+  if ( isNaN(param) ) {
+    return 'FLYING NOCTURNAL MAMMAL MAN!';
+  } else {
+    return param / 2;
+  }
+}
 
 
 //Now, call nananan with the value NaN, and store the 
 //result of the function call in a variable called "na".
 
-//Code here
+let na = nananan(NaN)
 
 
 ///////////////////Problem 12//////////////////
@@ -116,7 +116,7 @@ function undefiner(arr){
 //if the parameter is an array, and false otherwise.
 
 function arrayChecker(param){
-  typeOf(param) === Object ? true : false
+  return Array.isArray(param)
 }
 
 
