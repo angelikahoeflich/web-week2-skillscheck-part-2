@@ -11,8 +11,10 @@
 
 function invokesCallbacks(num, cb1, cb2){
   if (num > 10){
+    console.log("cb1():", cb1());
     return cb1()
   } else {
+    console.log("cb2():", cb2());
     return cb2()
   }
 }
@@ -27,16 +29,11 @@ function invokesCallbacks(num, cb1, cb2){
 //of invoking the callback parameter 
 //to the variable greeting, after 1 second.
 
-  var greeting;
+  let greeting;
 
   function timedGreeting(callback){
-
-  let greeting = callback( window.setTimeout(1000))
-
-  let greeting = window.setTimeout(callback(), 1000)
-
-  let greeting = window.setTimeout(callback, 1000)
-
-    
+    window.setTimeout(()=>{
+      greeting = callback();
+    }, 1000)
   }
 
