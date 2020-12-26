@@ -40,7 +40,7 @@ let book1CheckOut = book1.checkOut()
 // Run the function checkOut on book2, and save it to a
 // variable named book2CheckOut.
 
-// let book2CheckOut = checkout().bind(this)
+ let book2CheckOut = checkOut.apply(book2)
 
 
 // What is the context of running the function checkOut on book1?
@@ -54,13 +54,13 @@ var q2Context = 'explicit';
 // Run the function checkout, and save it to a
 // variable named globalCheckOut.
 
-let globalCheckOut = checkout()
+let globalCheckOut = checkOut()
 
 
 // What is the context of running checkOut()?
 // var q3Context = "explicit"
 //  var q3Context = "implicit"
-  // var q3Context = 'default';
+ var q3Context = 'default';
 // var q3Context = "new"
 
 
@@ -68,12 +68,12 @@ let globalCheckOut = checkout()
 // Using the .apply method on the book1's checkOut function, run it using book2
 // as the argument. Save the result to a variable named book2CheckOut2.
 
-// CODE HERE
+let book2CheckOut2 = book1.checkOut.apply(book2)
 
 
 // What is the context of applying the book1 method
 // checkOut to book2?
-// var q4Context = 'explicit';
+ var q4Context = 'explicit';
 // var q4Context = "implicit"
 // var q4Context = "default"
 // var q4Context = "new"
@@ -98,7 +98,8 @@ function updatePerson(name, age, title) {
 // pass in the values "Anne Boleyn", 30, and "Queen of
 // England"; save the result to a variable named queenAnne.
 
-//Code here
+let queenAnne = updatePerson.call(person1, 'Anne Boleyn', 30, 'Queen of England')
+
 
 
 // Q2:
@@ -106,7 +107,7 @@ function updatePerson(name, age, title) {
 // pass in the values "Catherine of Aragon", 37, and "Former
 // Queen"; save the result to a variable named queenCatherine.
 
-//Code here
+  let queenCatherine = updatePerson.apply(person2, ['Catherine of Aragon', 37, 'Former Queen'])
 
 
 // /////////////////Problem 3//////////////////
@@ -135,19 +136,19 @@ var hampton = new Castle('Hampton Court', 'England', 'red', 'bricks', false);
 // var q1CastleContext = "explicit"
 // var q1CastleContext = "implicit"
 // var q1CastleContext = "default"
-// var q1CastleContext = 'new';
+ var q1CastleContext = 'new';
 
 
 // Q2:
 // Run the getCastle method on chambord, and
 // save the result to a variable ran chambordInfo.
 
-// CODE HERE
+let chambordInfo = chambord.getCastle()
 
 
 // What was 'this' when you ran chambord.getCastle()?
 
-// var getCastleContext = "Castle"
-// var getCastleContext = 'chambord';
+//  var getCastleContext = "Castle"
+ var getCastleContext = 'chambord';
 // var getCastleContext = "new"
 // var getCastleContext = "window"
