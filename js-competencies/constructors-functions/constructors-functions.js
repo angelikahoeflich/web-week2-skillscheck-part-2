@@ -6,18 +6,10 @@
 //BROKEN ON PURPOSE 
 
 function EgyptianGoddesses(name, oversees, strength, weakness) {
-  name,
-  oversees,
-  strength,
-  weakness
-
-  return function() {
-    name,
-    oversees,
-    strength,
-    weakness
-  }
-  
+  this.name = name;
+  this.oversees = oversees;
+  this.strength = strength;
+  this.weakness = weakness; 
 }
 
 // Use the variable maatCharacteristics below to create a new Egyptian Goddess - save it to 
@@ -37,7 +29,8 @@ let maat = new EgyptianGoddesses('Maat', 'Truth and Justice', 'Balancing and Jus
 
 function TestScores(name, percent) {
  
-  return this.name + this.percent
+   this.name = name;
+   this.percent = percent;
 }
 
 
@@ -55,14 +48,21 @@ let suzy = new TestScores('Suzy', 98)
 // Each caveman should have a property called health that is equal to 100 and a property called energy 
 // that is equal to 100.
 
-//Code here
+function Caveman(name, age, weapon){
+  this.health = 100;
+  this.energy = 100;
+  this.name = name;
+  this.age = age;
+  this.weapon = weapon;
+
+}
 
 
 // Now create a new Caveman with the constructor function you made called 'larry'. 
 // Larry is 25 and has a 'rock' for a weapon.
 // Save the result to a variable called larry.
 
-//Code here
+let larry = new Caveman('Larry', 25, 'rock')
 
 
 
